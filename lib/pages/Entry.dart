@@ -1,4 +1,5 @@
 import 'package:cms_final/pages/CircleAv.dart';
+import 'package:cms_final/pages/signIn.dart';
 import 'package:flutter/material.dart';
 class Entry extends StatefulWidget {
   const Entry({Key? key}) : super(key: key);
@@ -12,11 +13,13 @@ class _EntryState extends State<Entry> {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: Scaffold(
-      //  appBar: AppBar( backgroundColor:Color(0xff202020),
-        //  leading:
-        //  Icon(Icons.arrow_back_ios,color: Colors.white,),
-       // ),
-       // backgroundColor: Colors.blueGrey[900],
+        appBar: AppBar(// backgroundColor:Color(0xff202020),
+          leading:IconButton(
+              icon: const Icon(Icons.arrow_back_ios),
+              onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const SignIn()));}
+          ),
+          // Icon(Icons.arrow_back_ios,color: Colors.white,),
+        ),
         body: SafeArea
           (
           child: Center(

@@ -20,6 +20,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar( backgroundColor:Color(0xff202020),
         leading:IconButton(
             icon: const Icon(Icons.arrow_back_ios),

@@ -12,6 +12,7 @@ class birth extends StatefulWidget {
 }
 
 class _birthState extends State<birth> {
+  String birth='pick your birth date';
  // TextEditingController emailController = TextEditingController();
  // TextEditingController passController = TextEditingController();
   @override
@@ -38,7 +39,7 @@ class _birthState extends State<birth> {
                   ),
                 ),
                 SizedBox(height: 20,),
-                titleText(text: "what is your birthday?"),
+                titleText(text: "What's your date of birth?"),
                 SizedBox(height: 20),
 
 
@@ -51,11 +52,16 @@ class _birthState extends State<birth> {
                             maxTime: DateTime(2025, 1, 1), onChanged: (date) {
                               print('change $date');
                             }, onConfirm: (date) {
+                          setState(() {
+                            birth="${date.day}/${date.month}/${date.year}";
+
+                          });
                               print('confirm $date');
+
                             }, currentTime: DateTime.now(), locale: LocaleType.en);
                       },
                       child: Text(
-                        'pick your birth date',
+                        birth,
                         style: TextStyle(color: Colors.blue),
                       )),
 

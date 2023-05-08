@@ -11,7 +11,9 @@ import 'package:cms_final/pages/entry1.dart';
 import 'package:cms_final/pages/genderPicker.dart';
 import 'package:cms_final/pages/myCourses.dart';
 import 'package:cms_final/pages/personalInfo.dart';
+import 'package:cms_final/pages/register.dart';
 import 'package:cms_final/pages/semesters.dart';
+import 'package:cms_final/pages/signIn.dart';
 import 'package:cms_final/pages/welcomeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home:WelcomeScreen(),
+      home:SignIn(),
     );
   }
 }
